@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Classes\Contratos\" />
     <Folder Include="Classes\Excepciones\" />
   </ItemGroup>
 
