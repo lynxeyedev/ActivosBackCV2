@@ -9,7 +9,7 @@ using AutoMapper;
 
 namespace ActivosAPI.Dominio.Servicios.SQL.Cliente
 {
-    public class ClientsSQLService : ICrudSQLService<ClientsSQLRepository>, IClienteSQLService
+    public class ClientsSQLService : ICrudSQLService<ClientsSQLContract>, IClientsSQLService
     {
         private readonly ICrudSQLRepository<ClienteSQLEntity> _cSQLRepo;
         private readonly IClientSQLRepository _clienteSQL;
@@ -25,40 +25,65 @@ namespace ActivosAPI.Dominio.Servicios.SQL.Cliente
             _mapper = mapper;
         }
 
-        public Task<List<ClientsSQLRepository>> GetAll()
+        public Task<List<ClientsSQLContract>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Task<ClientsSQLRepository> GetById(int id)
+        public Task<ClientsSQLContract> GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ClientsSQLRepository> Insert(ClientsSQLRepository entity)
+        public Task<ClientsSQLContract> Insert(ClientsSQLContract entity)
         {
             throw new NotImplementedException();
         }
 
         public async Task<List<ClientsSQLContract>> InsertFromMySql()
         {
-            List<ClientsEntity> clientsInMySQL = await _cMySqlRepo.GetAll();
-            foreach (ClientsEntity clientMySQL in clientsInMySQL)
+            List<ClienteSQLEntity> validarTabla = await _cSQLRepo.GetAll();
+            if (validarTabla != null)
             {
-                ClienteSQLEntity cliente = new ClienteSQLEntity()
+                await _cSQLRepo.Remove();
+                List<ClientsEntity> clientsInMySQL = await _cMySqlRepo.GetAll();
+                foreach (ClientsEntity clientMySQL in clientsInMySQL)
                 {
-                    cliente = clientMySQL.NOMBRE1,
-                    cif = clientMySQL.NIF,
-                    provincia = clientMySQL.CIUDAD2,
-                    ciudad = clientMySQL.CIUDAD,
-                    cp = clientMySQL.CP,
-                    telefono = clientMySQL.TELEFONO,
-                    email = clientMySQL.EMAIL
-                };
-                await _clienteSQL.insertFromMySQL(cliente);
+                    ClienteSQLEntity cliente = new ClienteSQLEntity()
+                    {
+                        cliente = clientMySQL.NOMBRE1,
+                        cif = clientMySQL.NIF,
+                        provincia = clientMySQL.CIUDAD,
+                        ciudad = clientMySQL.CIUDAD2,
+                        cp = clientMySQL.CP,
+                        telefono = clientMySQL.TELEFONO,
+                        email = clientMySQL.EMAIL
+                    };
+                    await _clienteSQL.insertFromMySQL(cliente);
+                }
+                List<ClienteSQLEntity> clientesInSQL = await _cSQLRepo.GetAll();
+                return _mapper.Map<List<ClientsSQLContract>>(clientesInSQL);
             }
-            List<ClienteSQLEntity> clientesInSQL = await _cSQLRepo.GetAll();
-            return _mapper.Map<List<ClientsSQLContract>>(clientesInSQL);
+            else
+            {
+                List<ClientsEntity> clientsInMySQL = await _cMySqlRepo.GetAll();
+                foreach (ClientsEntity clientMySQL in clientsInMySQL)
+                {
+                    ClienteSQLEntity cliente = new ClienteSQLEntity()
+                    {
+                        cliente = clientMySQL.NOMBRE1,
+                        cif = clientMySQL.NIF,
+                        provincia = clientMySQL.CIUDAD,
+                        ciudad = clientMySQL.CIUDAD2,
+                        cp = clientMySQL.CP,
+                        telefono = clientMySQL.TELEFONO,
+                        email = clientMySQL.EMAIL
+                    };
+                    await _clienteSQL.insertFromMySQL(cliente);
+                }
+                List<ClienteSQLEntity> clientesInSQL = await _cSQLRepo.GetAll();
+                return _mapper.Map<List<ClientsSQLContract>>(clientesInSQL);
+            } 
         }
     }
 }

@@ -11,9 +11,9 @@ namespace ActivosAPI.Controllers
     public class ClientsSQLController : ControllerBase
     {
         private readonly ICrudSQLService<ClientsSQLContract> _servicio;
-        private readonly IClienteSQLService _clienteServicio;
+        private readonly IClientsSQLService _clienteServicio;
         public ClientsSQLController(ICrudSQLService<ClientsSQLContract> servicio, 
-            IClienteSQLService clienteServicio)
+            IClientsSQLService clienteServicio)
         {
             _servicio = servicio;
             _clienteServicio = clienteServicio;

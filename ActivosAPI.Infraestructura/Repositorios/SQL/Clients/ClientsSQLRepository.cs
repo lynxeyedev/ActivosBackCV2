@@ -37,9 +37,9 @@ namespace ActivosAPI.Infraestructura.Repositorios.SQL.Clients
             await _context.SaveChangesAsync();
         }
 
-        public Task Remove()
+        public async Task Remove()
         {
-            throw new NotImplementedException();
+            await _context.Database.ExecuteSqlRawAsync("TRUNCATE TABLE Clientes");
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ActivosAPI.Dominio.Servicios.SQL.Cliente
 {
-    public interface IClienteSQLService
+    public interface IClientsSQLService
     {
         Task<List<ClientsSQLContract>> InsertFromMySql();
     }
