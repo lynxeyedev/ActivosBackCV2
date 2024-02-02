@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gxWJknR0BecDha60lxZarCcHgxJoZdrisOxEVmAhfYylTDrVmTW29VeGnxCboK4bG9zZfvblXXXzElU8FyKRKQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JorgeRomero\\Documents\\Desarrollo\\CSharp\\ActivosAPI\\ActivosAPI.Comunes\\ActivosAPI.Comunes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JorgeRomero\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
