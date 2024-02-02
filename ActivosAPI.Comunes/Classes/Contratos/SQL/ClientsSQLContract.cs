@@ -10,5 +10,6 @@
         public string? cp { get; set; }
         public string? telefono { get; set; }
         public string? email { get; set; }
+        public int? idcattendo { get; set; }
     }
 }

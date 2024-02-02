@@ -57,7 +57,8 @@ namespace ActivosAPI.Dominio.Servicios.SQL.Cliente
                         ciudad = clientMySQL.CIUDAD2,
                         cp = clientMySQL.CP,
                         telefono = clientMySQL.TELEFONO,
-                        email = clientMySQL.EMAIL
+                        email = clientMySQL.EMAIL,
+                        idcattendo = clientMySQL.id
                     };
                     await _clienteSQL.insertFromMySQL(cliente);
                 }
@@ -77,7 +78,8 @@ namespace ActivosAPI.Dominio.Servicios.SQL.Cliente
                         ciudad = clientMySQL.CIUDAD2,
                         cp = clientMySQL.CP,
                         telefono = clientMySQL.TELEFONO,
-                        email = clientMySQL.EMAIL
+                        email = clientMySQL.EMAIL,
+                        idcattendo = clientMySQL.id
                     };
                     await _clienteSQL.insertFromMySQL(cliente);
                 }

@@ -14,6 +14,7 @@ namespace ActivosAPI.Infraestructura.Database.Context
         }
         #region [DBSets]
         public virtual DbSet<ClientsEntity> Clients { get; set; }
+        public virtual DbSet<ContactosEntity> Contactos { get; set; }  
         #endregion
     }
 }
