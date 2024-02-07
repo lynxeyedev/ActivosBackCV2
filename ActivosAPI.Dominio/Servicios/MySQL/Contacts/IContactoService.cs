@@ -4,6 +4,8 @@ namespace ActivosAPI.Dominio.Servicios.MySQL.Contacts
 {
     public interface IContactoService
     {
-        Task<ContactosContract> GetByIdCliente(int idCliente);
+        Task<List<ContactosContract>> GetByIdCliente(int idCliente);
+        Task<List<ClientsContactsContract>> GetAllClientsContact();
+        Task<List<ClientsContactsContract>> GetClientContact(int idCliente);
     }
 }

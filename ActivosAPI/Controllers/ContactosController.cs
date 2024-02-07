@@ -35,5 +35,18 @@ namespace ActivosAPI.Controllers
         {
             return Ok(await _contactoServicio.GetByIdCliente(idcliente));
         }
+
+        [HttpGet("ClientesContactosList")]
+        public async Task<IActionResult> ObtenerClientesYContactos()
+        {
+            return Ok(await _contactoServicio.GetAllClientsContact());
+        }
+
+        [HttpGet("ClienteContacto/{idcliente}")]
+        public async Task<IActionResult> ObtenerClienteYContacto(int idcliente)
+        {
+            return Ok(await _contactoServicio.GetClientContact(idcliente));
+        }
+
     }
 }

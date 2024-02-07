@@ -24,10 +24,10 @@ namespace ActivosAPI.Infraestructura.Repositorios.MySQL.Contacts
                 .FirstOrDefaultAsync(con => con.id == id);
         }
 
-        public async Task<ContactosEntity> GetContactoByIDCliente(int idCliente)
+        public async Task<List<ContactosEntity>> GetContactoByIDCliente(int idCliente)
         {
             return await _context.Contactos
-                .FirstOrDefaultAsync(cont => cont.Campo1 == idCliente);
+                .Where(cont => cont.Campo1 == idCliente).ToListAsync();
         }
     }
 }

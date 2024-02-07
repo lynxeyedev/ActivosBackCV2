@@ -1,3 +1,4 @@
+using ActivosAPI.Comunes.Classes.Excepciones;
 using ActivosAPI.Configuracion.Inicio;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +22,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<MiddlewareExcepciones>();
 
 app.UseAuthorization();
 

@@ -21,7 +21,7 @@ namespace ActivosAPI.Infraestructura.Repositorios.MySQL.Clients
         public Task<ClientsEntity> GetById(int id)
         {
             return _context.Clients
-                .FirstOrDefaultAsync(c=>c.id == id);
+                .FirstOrDefaultAsync(c=>c.idclient == id);
         }
     }
 }

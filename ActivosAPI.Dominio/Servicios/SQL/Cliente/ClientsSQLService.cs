@@ -51,14 +51,14 @@ namespace ActivosAPI.Dominio.Servicios.SQL.Cliente
                 {
                     ClienteSQLEntity cliente = new ClienteSQLEntity()
                     {
-                        cliente = clientMySQL.NOMBRE1,
+                        cliente = clientMySQL.nombre1,
                         cif = clientMySQL.NIF,
-                        provincia = clientMySQL.CIUDAD,
-                        ciudad = clientMySQL.CIUDAD2,
+                        provincia = clientMySQL.provincia,
+                        ciudad = clientMySQL.ciudad,
                         cp = clientMySQL.CP,
-                        telefono = clientMySQL.TELEFONO,
-                        email = clientMySQL.EMAIL,
-                        idcattendo = clientMySQL.id
+                        telefono = clientMySQL.telefono,
+                        email = clientMySQL.email,
+                        idcattendo = clientMySQL.idclient
                     };
                     await _clienteSQL.insertFromMySQL(cliente);
                 }
@@ -72,14 +72,14 @@ namespace ActivosAPI.Dominio.Servicios.SQL.Cliente
                 {
                     ClienteSQLEntity cliente = new ClienteSQLEntity()
                     {
-                        cliente = clientMySQL.NOMBRE1,
+                        cliente = clientMySQL.nombre1,
                         cif = clientMySQL.NIF,
-                        provincia = clientMySQL.CIUDAD,
-                        ciudad = clientMySQL.CIUDAD2,
+                        provincia = clientMySQL.provincia,
+                        ciudad = clientMySQL.ciudad,
                         cp = clientMySQL.CP,
-                        telefono = clientMySQL.TELEFONO,
-                        email = clientMySQL.EMAIL,
-                        idcattendo = clientMySQL.id
+                        telefono = clientMySQL.telefono,
+                        email = clientMySQL.email,
+                        idcattendo = clientMySQL.idclient
                     };
                     await _clienteSQL.insertFromMySQL(cliente);
                 }

@@ -7,26 +7,27 @@ namespace ActivosAPI.Infraestructura.Database.Entity.MySQL
     public class ClientsEntity
     {
         [Key]
-        public int id { get; set; }
+        public int idclient { get; set; }
+        public int? campo1 { get; set; }
         public string? CodCliente { get; set; }
         public string? NIF { get; set; }
-        public int? NOSE1 { get; set; }
-        public string? NOSE2 { get; set; }
-        public string? NOSE3 { get; set; }
-        public string? NOMBRE1 { get; set; }
-        public string? NOMBRE2 { get; set; }
-        public string? EMAIL { get; set; }
-        public string? TELEFONO { get; set; }
-        public string? DIRECCION { get; set; }
+        public int? campo2 { get; set; }
+        public string? campo3 { get; set; }
+        public string? campo4 { get; set; }
+        public string? nombre1 { get; set; }
+        public string? nombre2 { get; set; }
+        public string? email { get; set; }
+        public string? telefono { get; set; }
+        public string? direccion { get; set; }
         public string? CP { get; set; }
-        public string? CIUDAD { get; set; }
-        public string? CIUDAD2 { get; set; }
-        public int? NOSE4 { get; set; }
-        public string? NOSE5 { get; set; }
-        public DateTime FECHA1 { get; set; } = DateTime.Now;
-        public DateTime FECHA2 { get; set; } = DateTime.Now;
-        public int? NOSE6 { get; set; }
-        public int? NOSE7 { get; set; }
-        public int? NOSE8 { get; set; }
+        public string? provincia { get; set; }
+        public string? ciudad { get; set; }
+        public int? campo5 { get; set; }
+        public string? campo6 { get; set; }
+        public DateTime fecha1 { get; set; } = DateTime.Now;
+        public DateTime fecha2 { get; set; } = DateTime.Now;
+        public int? campo7 { get; set; }
+        public int? campo8 { get; set; }
+        public int? campo9 { get; set; }
     }
 }

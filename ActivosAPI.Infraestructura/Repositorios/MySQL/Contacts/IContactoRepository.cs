@@ -4,6 +4,6 @@ namespace ActivosAPI.Infraestructura.Repositorios.MySQL.Contacts
 {
     public interface IContactoRepository
     {
-        Task<ContactosEntity> GetContactoByIDCliente(int idCliente);
+        Task<List<ContactosEntity>> GetContactoByIDCliente(int idCliente);
     }
 }
