@@ -18,9 +18,9 @@ namespace ActivosAPI.Infraestructura.Repositorios.MySQL.Clients
             return await _context.Clients.ToListAsync();
         }
 
-        public Task<ClientsEntity> GetById(int id)
+        public async Task<ClientsEntity> GetById(int id)
         {
-            return _context.Clients
+            return await _context.Clients
                 .FirstOrDefaultAsync(c=>c.idclient == id);
         }
     }
