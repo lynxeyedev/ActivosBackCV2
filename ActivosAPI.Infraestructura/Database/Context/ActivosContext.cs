@@ -17,6 +17,7 @@ namespace ActivosAPI.Infraestructura.Database.Context
         public virtual DbSet<ContactosEntity> Contactos { get; set; }
         public virtual DbSet<TicketsEntity> Tickets { get; set; }
         public virtual DbSet<ApplicantEntity> Aplicante { get; set; }
+        public virtual DbSet<StatusEntity> Status { get; set; }
         #endregion
     }
 }

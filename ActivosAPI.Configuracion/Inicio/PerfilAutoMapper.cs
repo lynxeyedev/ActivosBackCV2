@@ -15,6 +15,7 @@ namespace ActivosAPI.Configuracion.Inicio
             CreateMap<ContactoSQLEntity, ContactSQLContarct>().ReverseMap();
             CreateMap<TicketsEntity, TicketContract>().ReverseMap();
             CreateMap<ApplicantEntity, ApplicantContract>().ReverseMap();
+            CreateMap<StatusEntity, StatusContract>().ReverseMap();
         }
     }
 }
