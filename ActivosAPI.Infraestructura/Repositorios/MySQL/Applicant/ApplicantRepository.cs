@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ActivosAPI.Infraestructura.Repositorios.MySQL.Applicant
 {
-    public class ApplicantRepository : IActivosRepository<ApplicantEntity>
+    public class ApplicantRepository : IActivosRepository<ApplicantEntity>, IApplicantRepository
     {
         private readonly ActivosContext _context;
         public ApplicantRepository(ActivosContext context)
@@ -18,10 +18,16 @@ namespace ActivosAPI.Infraestructura.Repositorios.MySQL.Applicant
             return await _context.Aplicante.ToListAsync();
         }
 
+        public async Task<List<ApplicantEntity>> GetApplicantByMonthYear(int mes, int anio)
+        {
+            return await _context.Aplicante
+                .Where(a => a.mes == mes && a.anio == anio).ToListAsync();
+        }
+
         public async Task<ApplicantEntity> GetById(int id)
         {
             return await _context.Aplicante
-                .FirstOrDefaultAsync(a => a.ID == id);
+                .FirstOrDefaultAsync(a => a.idapplicant == id);
         }
     }
 }

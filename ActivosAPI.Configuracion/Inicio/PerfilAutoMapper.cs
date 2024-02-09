@@ -16,6 +16,13 @@ namespace ActivosAPI.Configuracion.Inicio
             CreateMap<TicketsEntity, TicketContract>().ReverseMap();
             CreateMap<ApplicantEntity, ApplicantContract>().ReverseMap();
             CreateMap<StatusEntity, StatusContract>().ReverseMap();
+            CreateMap<TimelineEntity, TimelineContract>().ReverseMap();
+            CreateMap<TicketsEntity,TicketsDTOContract>().ReverseMap();
+            CreateMap<StatusEntity, StatusDTOContract>().ReverseMap();
+            CreateMap<ApplicantEntity, ApplicantDTOContract>().ReverseMap();
+            CreateMap<ClientsEntity, ClientsDTOContract>().ReverseMap();
+            CreateMap<TimelineEntity, TimelineDTOContract>().ReverseMap();
+            
         }
     }
 }

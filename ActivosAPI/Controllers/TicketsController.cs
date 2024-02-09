@@ -34,5 +34,18 @@ namespace ActivosAPI.Controllers
         {
             return Ok(await _ticket.GetTicketbyStatusid(idstatus));
         }
+        
+        [HttpGet("detalleticketsstatus/{idstatus}/{mes}/{anio}")]
+        public async Task<IActionResult> TicketsDetallePorStatusV2(int idstatus, int mes, int anio)
+        {
+            return Ok(await _ticket.GetTicketsByStatusTL(idstatus, mes, anio));
+        }
+
+        [HttpGet("detalleticket/{nticket}")]
+        public async Task<IActionResult> TicketDetalle(int nticket)
+        {
+            return Ok(await _ticket.GetTicketDetailByN(nticket));
+        }
+
     }
 }

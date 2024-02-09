@@ -21,7 +21,7 @@ namespace ActivosAPI.Infraestructura.Repositorios.MySQL.Tickets
         public async Task<TicketsEntity> GetById(int id)
         {
             return await _context.Tickets
-                .FirstOrDefaultAsync(t => t.ID == id);
+                .FirstOrDefaultAsync(t => t.idtickets == id);
         }
 
         public async Task<List<TicketsEntity>> GetByStatusId(int statusId)

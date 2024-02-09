@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ActivosAPI.Dominio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ae0a70e27ae52b915343d3d341089a2abb6ad21")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b55b4c817c92dd2fe079b35fa326762ac62b5fbe")]
 [assembly: System.Reflection.AssemblyProductAttribute("ActivosAPI.Dominio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ActivosAPI.Dominio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

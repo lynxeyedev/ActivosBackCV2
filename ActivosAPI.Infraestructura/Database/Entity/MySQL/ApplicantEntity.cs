@@ -7,12 +7,14 @@ namespace ActivosAPI.Infraestructura.Database.Entity.MySQL
     public class ApplicantEntity
     {
         [Key]
-        public int ID { get; set; }
-        public int? campo1 { get; set; }
-        public string? campo2 { get; set; }
-        public string? campo6 { get; set; }
-        public DateTime? campo14 { get; set; }
-        public DateTime? campo15 { get; set; }
+        public int idapplicant { get; set; }
+        public int? idcliente { get; set; }
+        public string? nombre { get; set; }
+        public string? email { get; set; }
+        public DateTime? fechaapplicant { get; set; }
+        public DateTime? fechaapplicant2 { get; set; }
+        public int? mes {  get; set; }
+        public int? anio { get; set; }
 
     }
 }

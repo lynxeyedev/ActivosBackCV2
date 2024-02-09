@@ -18,6 +18,7 @@ namespace ActivosAPI.Infraestructura.Database.Context
         public virtual DbSet<TicketsEntity> Tickets { get; set; }
         public virtual DbSet<ApplicantEntity> Aplicante { get; set; }
         public virtual DbSet<StatusEntity> Status { get; set; }
+        public virtual DbSet<TimelineEntity> Timeline { get; set; }
         #endregion
     }
 }

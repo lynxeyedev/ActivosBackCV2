@@ -2,7 +2,7 @@
 {
     public class TicketContract
     {
-        public int ID { get; set; }
+        public int idtickets { get; set; }
         public int? Campo1 { get; set; }
         public string? subject { get; set; }
         public int? Campo3 { get; set; }
@@ -22,7 +22,7 @@
         public bool? campo18 { get; set; }
         public bool? campo19 { get; set; }
         public bool? campo20 { get; set; }
-        public string? campo21 { get; set; }
+        public DateTime? fecha { get; set; }
         public int? campo22 { get; set; }
         public bool? campo23 { get; set; }
         public string? campo24 { get; set; }
